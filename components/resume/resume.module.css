@@ -1,0 +1,123 @@
+.container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.resume {
+  position: relative;
+}
+.resume::before {
+  content: "";
+  width: 35%;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, 0%);
+  background-color: #0563bb;
+  height: 3px;
+  position: absolute;
+}
+.resume::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  background-color: #ddd;
+  position: absolute;
+}
+.container > p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.container p {
+  color: #728394;
+}
+
+.jobHistory {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.summary {
+  margin-bottom: 20px;
+}
+
+.education {
+  padding: 0px 30px;
+  position: relative;
+}
+
+.education > p {
+  font-style: italic;
+}
+
+.education p {
+  color: #728394;
+}
+
+.education ul li {
+  padding: 10px;
+  color: #728394;
+}
+
+.spots {
+  position: relative;
+}
+
+.spot {
+  position: absolute;
+  width: 15px;
+  top: 5px;
+  left: -30px;
+  border: 2px solid #0563bb;
+  height: 15px;
+  border-radius: 50%;
+}
+.joinSpot {
+  position: absolute;
+  background-color: white;
+  width: 15px;
+  top: 52%;
+  left: 0;
+  border: 2px solid #0563bb;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.education:before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 18px;
+  height: 100%;
+  width: 2px;
+  background-color: #0563bb;
+}
+
+.education h2 {
+  color: #0563bb;
+}
+
+.tag {
+  width: 30%;
+  text-align: center;
+  background-color: #e9ecef;
+}
+.tag p {
+  padding: 3px 0px;
+}
+
+/* Media Queries */
+@media (max-width: 786px) {
+  .jobHistory {
+    grid-template-columns: 1fr !important;
+  }
+  .tag {
+    width: 100% !important;
+  }
+}
