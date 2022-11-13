@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     domains: ["picsum.photos"],
     loader: 'akamai',
-    path: '',
   },
   assetPrefix: './',
 };
