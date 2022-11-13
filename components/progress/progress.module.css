@@ -1,0 +1,24 @@
+.container {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.container .skill {
+  display: flex;
+  justify-content: space-between;
+}
+.bar {
+  margin-top: 10px;
+  height: 10px;
+  width: 100%;
+
+  background-color: #e9ecef;
+  position: relative;
+}
+
+.percent {
+  margin-top: 10px;
+  background-color: #0563bb;
+  height: 10px;
+  bottom: 0;
+  position: absolute;
+}

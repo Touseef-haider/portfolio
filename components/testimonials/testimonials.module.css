@@ -1,0 +1,48 @@
+.container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonials {
+  position: relative;
+}
+.testimonials::before {
+  content: "";
+  width: 35%;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, 0%);
+  background-color: #0563bb;
+  height: 3px;
+  position: absolute;
+}
+.testimonials::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  background-color: #ddd;
+  position: absolute;
+}
+.container > p {
+  text-align: center;
+  font-size: 18px;
+}
+.container p {
+  color: #728394;
+}
+.reviews {
+  width: 70%;
+  margin-top: 50px;
+}
+
+/* Media Queries */
+@media (max-width: 786px) {
+  .reviews {
+    width: 100% !important;
+  }
+}

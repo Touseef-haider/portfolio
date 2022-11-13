@@ -1,0 +1,84 @@
+.container {
+  height: 100vh;
+  position: relative;
+}
+.container::before {
+  content: "";
+  background-image: url("../../public/hero-bg.jpeg");
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  opacity: 0.3;
+  text-align: center;
+}
+
+.intro {
+  height: 90%;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding-left: 170px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 64px;
+  color: black;
+}
+.profession {
+  font-size: 26px;
+  margin-top: -35px;
+}
+
+.links {
+  display: flex;
+}
+.links a {
+  padding-right: 50px;
+}
+.links a:hover img {
+  filter: contrast(0);
+}
+
+/* Media Queries */
+@media (max-width: 786px) {
+  .container {
+    background-size: cover;
+    background-image: url("../../public/touseef2.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  .intro {
+    padding: 0;
+    align-items: center !important;
+  }
+  .name {
+    font-size: 35px !important;
+  }
+  .profession {
+    font-size: 18px !important;
+    margin-top: -15px !important;
+  }
+  .links {
+    width: 35%;
+    justify-content: space-around;
+  }
+  .links a {
+    padding: 0px;
+  }
+}
+
+/* KEY FRAMES */
+
+@keyframes show-up {
+  0% {
+    transform: scale(0.3);
+    transition: transform ease-in 1s;
+  }
+  100% {
+    transform: scale(1);
+    transition: transform ease-in 1s;
+  }
+}
