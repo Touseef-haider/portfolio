@@ -6,73 +6,9 @@ import Image from "next/image";
 import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
 import ProjectSlider from "../projectSlider/index";
+import { portfolioTabs } from "../../utils/constant";
 
-const tabs = [
-  {
-    item: "ALL",
-    index: 0,
-    cards: [
-      {
-        image: "https://picsum.photos/500/500?random=3",
-        title: "ALL",
-      },
-      {
-        image: "https://picsum.photos/500/500?random=4",
-        title: "ALL",
-      },
-      {
-        image: "https://picsum.photos/500/500?random=5",
-        title: "ALL",
-      },
-    ],
-  },
-  {
-    item: "WEB",
-    index: 1,
-    cards: [
-      {
-        image: "https://picsum.photos/500/500?random=11",
-        title: "WEB",
-      },
-      {
-        image: "https://picsum.photos/500/500?random=6",
-        title: "WEB",
-      },
-      {
-        image: "https://picsum.photos/500/500?random=7",
-        title: "WEB",
-      },
-    ],
-  },
-  {
-    item: "APP",
-    index: 2,
-    cards: [
-      {
-        image: "https://picsum.photos/500/500?random=8",
-        title: "APP",
-      },
-      {
-        image: "https://picsum.photos/500/500?random=9",
-        title: "APP",
-      },
-      {
-        image: "https://picsum.photos/500/500?random=10",
-        title: "APP",
-      },
-    ],
-  },
-  {
-    item: "SERVER",
-    index: 3,
-    cards: [
-      {
-        image: "https://picsum.photos/500/500?random=10",
-        title: "SERVER",
-      },
-    ],
-  },
-];
+const tabs = portfolioTabs;
 
 const Portfolio = () => {
   const [index, setIndex] = useState(0);
@@ -133,9 +69,7 @@ const Portfolio = () => {
       </div>
       <div style={{ backgroundColor: "black" }}>
         <Modal {...modalProps}>
-          <div
-            style={{ width: "80%", height: "100%",margin:"0 auto" }}
-          >
+          <div style={{ width: "80%", height: "100%", margin: "0 auto" }}>
             <ProjectSlider images={filteredData[0]?.cards} />
           </div>
         </Modal>

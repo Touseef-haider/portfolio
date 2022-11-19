@@ -5,39 +5,37 @@ import facebookIcon from "../../public/facebook.png";
 import linkedInIcon from "../../public/linkedin.png";
 import githubIcon from "../../public/github.png";
 import twitterIcon from "../../public/twitter.png";
+import { links, personalInfo } from "../../utils/constant";
 
 const Footer = () => {
   return (
     <footer className={`${styles.footer}`}>
-      <h1>Touseef Haider</h1>
-      <small>
-        Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi
-        fuga maxime saepe commodi placeat.
-      </small>
+      <h1>{personalInfo.name}</h1>
+      <small>{personalInfo.footerIntro}</small>
       <div className={styles.socialLinks}>
-        <a href="#">
+        <a href={links.facebook} target="_blank" rel="noreferrer">
           <div className={styles.link}>
             <Image src={facebookIcon} height={15} width={15} />
           </div>
         </a>
-        <a href="#">
+        <a href={links.linkedIn} target="_blank" rel="noreferrer">
           <div className={styles.link}>
             <Image src={linkedInIcon} height={15} width={15} />
           </div>
         </a>
-        <a href="#">
+        <a href={links.github} target="_blank" rel="noreferrer">
           <div className={styles.link}>
             <Image src={githubIcon} height={15} width={15} />
           </div>
         </a>
-        <a href="#">
+        <a href={links.twitter} target="_blank" rel="noreferrer">
           <div className={styles.link}>
             <Image src={twitterIcon} height={15} width={15} />
           </div>
         </a>
       </div>
       <small className={styles.copyRight}>
-        © Copyright <b>Touseef Haider</b>. All Rights Reserved
+        © Copyright <b>{personalInfo.name}</b>. All Rights Reserved
       </small>
     </footer>
   );

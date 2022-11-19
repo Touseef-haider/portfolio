@@ -1,13 +1,6 @@
-/* eslint-disable jsx-a11y/alt-text */
 import styles from "./services.module.css";
-import ReactImage from "../../public/react.png";
-import HTMLCSS from "../../public/htmlandcss.jpeg";
-import NodeJsImage from "../../public/nodejs.png";
-import NextJsImage from "../../public/nextjs.png";
-import NestJsImage from "../../public/nestjs.jpeg";
-import Mongodb from "../../public/mongo.png";
-import JS from "../../public/js.png";
 import Image from "next/image";
+import { services } from "../../utils/constant";
 
 const Services = () => {
   return (
@@ -15,70 +8,22 @@ const Services = () => {
       <div className={styles.service}>
         <h1>SERVICES</h1>
       </div>
-      <p>
-        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-        aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-        quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-        sit in iste officiis commodi quidem hic quas.
-      </p>
+      <p>{services.intro}</p>
       <div className={styles.development}>
-        <div className={styles.card}>
-          <div className={styles.cardInner}>
-            <div className={styles.frontPart}>
-              <h3>Front End Development</h3>
-            </div>
-            <div className={styles.backPart}>
-              <Image src={ReactImage} />
-              <Image src={HTMLCSS} />
-              <Image src={JS} />
-              <Image src={NextJsImage} />
-            </div>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.cardInner}>
-            <div className={styles.frontPart}>
-              <h3>Back End Development</h3>
-            </div>
-            <div className={styles.backPart}>
-              <Image src={NodeJsImage} />
-              <Image src={NestJsImage} />
+        {services.servicesGiven.map((service) => (
+          <div className={styles.card} key={service.serviceName}>
+            <div className={styles.cardInner}>
+              <div className={styles.frontPart}>
+                <h3>{service.serviceName}</h3>
+              </div>
+              <div className={styles.backPart}>
+                {service.details.map((detail) => (
+                  <Image key={detail.icon} alt="service" src={detail.icon} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.cardInner}>
-            <div className={styles.frontPart}>
-              <h3>Databases</h3>
-            </div>
-            <div className={styles.backPart}>
-              <Image src={Mongodb} />
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.cardInner}>
-            <div className={styles.frontPart}>
-              <h3>Cloud</h3>
-            </div>
-            <div className={styles.backPart}>
-              <p>AWS</p>
-              <p>Firebase</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.cardInner}>
-            <div className={styles.frontPart}>
-              <h3>Other</h3>
-            </div>
-            <div className={styles.backPart}>
-              <p>Docker</p>
-              <p>Kubernetes</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

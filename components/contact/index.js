@@ -5,6 +5,7 @@ import Location from "../../public/pin.png";
 import Email from "../../public/mail.png";
 import Call from "../../public/smartphone.png";
 import { useState } from "react";
+import { personalInfo } from "../../utils/constant";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const Contact = () => {
             </div>
             <div className={styles.detail}>
               <h2>Location: </h2>
-              <small>A108 Adam Street, New York, NY 535022</small>
+              <small>{personalInfo.address}</small>
             </div>
           </div>
           <div className={styles.details}>
@@ -41,7 +42,7 @@ const Contact = () => {
             </div>
             <div className={styles.detail}>
               <h2>Email: </h2>
-              <small>touseefhaider355@gmail.com</small>
+              <small>{personalInfo.email}</small>
             </div>
           </div>
           <div className={styles.details}>
@@ -50,7 +51,7 @@ const Contact = () => {
             </div>
             <div className={styles.detail}>
               <h2>Call: </h2>
-              <small>+923312924590</small>
+              <small>{personalInfo.phone}</small>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 
 import "slick-carousel/slick/slick-theme.css";
 
-const ProjectSlider = ({images}) => {
+const ProjectSlider = ({ images }) => {
   const settings = {
     infinite: true,
     dots: true,
@@ -17,18 +17,16 @@ const ProjectSlider = ({images}) => {
   };
   return (
     <Slider {...settings}>
-      {
-        images?.length>0 && 
-        images.map(i=>(
+      {images?.length > 0 &&
+        images.map((i) => (
           <Image
-          width={750}
-          height={500}
-          key={i?.image}
-          alt=""
+            width={750}
+            height={500}
+            key={i?.image}
+            alt=""
             src={i?.image}
           />
-        ))
-      }
+        ))}
     </Slider>
   );
 };
