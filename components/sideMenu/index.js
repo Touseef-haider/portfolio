@@ -12,8 +12,13 @@ import { useState } from "react";
 
 const SideMenu = () => {
   const [addClass, setAddClass] = useState(false);
+  const [active, setActive] = useState(1);
   const handleToggler = () => {
     setAddClass(!addClass);
+  };
+
+  const handleActive = (id) => {
+    setActive(id);
   };
 
   return (
@@ -26,42 +31,108 @@ const SideMenu = () => {
       >
         <Image src={Toggler} alt="toggle" />
       </div>
-      <MobileSideMenu addClass={addClass} />
+      <MobileSideMenu addClass={addClass} setAddClass={setAddClass} />
       <ul className={styles.sideMenu}>
         <a href="#home">
-          <li className={styles.menuItem}>
-            <Image src={HomeIcon} alt="Home" width={15} height={15} />
+          <li
+            onClick={() => handleActive(1)}
+            className={`${styles.menuItem} ${
+              active === 1 ? styles.active : ""
+            }`}
+          >
+            <Image
+              src={HomeIcon}
+              className={active === 1 && styles.activeImg}
+              alt="Home"
+              width={15}
+              height={15}
+            />
             <span>Home</span>
           </li>
         </a>
         <a href="#about">
-          <li className={styles.menuItem}>
-            <Image src={AboutIcon} alt="About" width={18} height={18} />
+          <li
+            onClick={() => handleActive(2)}
+            className={`${styles.menuItem} ${
+              active === 2 ? styles.active : ""
+            }`}
+          >
+            <Image
+              src={AboutIcon}
+              className={active === 2 && styles.activeImg}
+              alt="About"
+              width={18}
+              height={18}
+            />
             <span>About</span>
           </li>
         </a>
         <a href="#resume">
-          <li className={styles.menuItem}>
-            <Image src={ResumeIcon} alt="Education" width={18} height={18} />
+          <li
+            onClick={() => handleActive(3)}
+            className={`${styles.menuItem} ${
+              active === 3 ? styles.active : ""
+            }`}
+          >
+            <Image
+              className={active === 3 && styles.activeImg}
+              src={ResumeIcon}
+              alt="Education"
+              width={18}
+              height={18}
+            />
             <span>Resume</span>
           </li>
         </a>
 
         <a href="#services">
-          <li className={styles.menuItem}>
-            <Image src={ServicesIcon} alt="Services" width={15} height={15} />
+          <li
+            onClick={() => handleActive(4)}
+            className={`${styles.menuItem} ${
+              active === 4 ? styles.active : ""
+            }`}
+          >
+            <Image
+              className={active === 4 && styles.activeImg}
+              src={ServicesIcon}
+              alt="Services"
+              width={15}
+              height={15}
+            />
             <span>Services</span>
           </li>
         </a>
         <a href="#portfolio">
-          <li className={styles.menuItem}>
-            <Image src={PortfolioIcon} alt="Skills" width={18} height={18} />
+          <li
+            onClick={() => handleActive(5)}
+            className={`${styles.menuItem} ${
+              active === 5 ? styles.active : ""
+            }`}
+          >
+            <Image
+              className={active === 5 && styles.activeImg}
+              src={PortfolioIcon}
+              alt="Skills"
+              width={18}
+              height={18}
+            />
             <span>Portfolio</span>
           </li>
         </a>
         <a href="#contact">
-          <li className={styles.menuItem}>
-            <Image src={ContactIcon} alt="Projects" width={18} height={18} />
+          <li
+            onClick={() => handleActive(6)}
+            className={`${styles.menuItem} ${
+              active === 6 ? styles.active : ""
+            }`}
+          >
+            <Image
+              className={active === 6 && styles.activeImg}
+              src={ContactIcon}
+              alt="Projects"
+              width={18}
+              height={18}
+            />
             <span>Contact</span>
           </li>
         </a>
