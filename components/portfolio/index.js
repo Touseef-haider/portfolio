@@ -6,21 +6,36 @@ import Image from "next/image";
 import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
 import ProjectSlider from "../projectSlider/index";
-import { portfolioTabs } from "../../utils/constant";
+import { portfolio, portfolioTabs } from "../../utils/constant";
 
 const tabs = portfolioTabs;
 
 const Portfolio = () => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
+  const [selectedCardIndex, setSelectedCardIndex] = useState(0);
 
-  const { getTriggerProps, modalProps } = useModal({
-    background: "grey",
+  const { getTriggerProps, modalProps, } = useModal({
+    background: "#d7dce1",
   });
   const handleTab = (e) => {
-    setIndex(Number(e.target.getAttribute("tabIndex")));
+
+    const newIndex = Number(e.target.getAttribute("tabIndex"));
+    setIndex(newIndex);
   };
 
-  const filteredData = tabs.filter((t) => t.index === index);
+  const handleCardClick = (cardIndex) => {
+    setSelectedCardIndex(cardIndex);
+  }
+
+  const filteredData = tabs.filter((t) => {
+    if (index) {
+      return t.index === index
+    }
+  });
+
+  console.log(filteredData)
+
+
 
   return (
     <div className={styles.container} id="portfolio">
@@ -28,17 +43,14 @@ const Portfolio = () => {
         <h1>PORTFOLIO</h1>
       </div>
       <p>
-        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-        aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-        quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-        sit in iste officiis commodi quidem hic quas.
+       {portfolio.intro}
       </p>
       <div className={styles.tabs}>
         {tabs.map((item) => (
           <div
             key={item.index}
             tabIndex={item.index}
-            className={index == item.index ? styles.active : ""}
+            className={index === item.index ? styles.active : ""}
             onClick={handleTab}
           >
             {item.item}
@@ -46,21 +58,24 @@ const Portfolio = () => {
         ))}
       </div>
       <div className={styles.tabsElement}>
-        {filteredData.length > 0 &&
+        {Array.isArray(filteredData) && filteredData.length > 0 &&
           filteredData.map((item) => (
-            <div className={styles.element}>
-              {item?.cards?.map((card) => (
+            <div key={item.index} className={styles.element}>
+              {item?.cards?.map((card, index) => (
                 <div>
                   <Image
-                    width={500}
-                    height={500}
+                    width={460}
+                    height={270}
                     src={card.image}
+                    onClick={() => handleCardClick(index)}
                     alt="image"
                   />
                   <div className={styles.wrapper}>
                     <h4>{card.title}</h4>
-                    <small>title</small>
-                    <p {...getTriggerProps()}>+</p>
+                    <small>{card.name}</small>
+                    {selectedCardIndex === index && (
+                      <p {...getTriggerProps()}>+</p>
+                    )}
                   </div>
                 </div>
               ))}
@@ -70,7 +85,7 @@ const Portfolio = () => {
       <div style={{ backgroundColor: "black" }}>
         <Modal {...modalProps}>
           <div style={{ width: "80%", height: "100%", margin: "0 auto" }}>
-            <ProjectSlider images={filteredData[0]?.cards} />
+            <ProjectSlider images={tabs.length > 0 && filteredData[0]?.cards} />
           </div>
         </Modal>
       </div>

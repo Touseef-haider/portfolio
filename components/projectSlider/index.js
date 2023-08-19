@@ -20,7 +20,8 @@ const ProjectSlider = ({ images }) => {
       {images?.length > 0 &&
         images.map((i) => (
           <Image
-            width={750}
+            // layout="fill"
+            width={1000}
             height={500}
             key={i?.image}
             alt=""

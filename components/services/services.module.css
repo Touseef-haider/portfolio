@@ -45,7 +45,7 @@
 }
 
 .card {
-  height: 30vh;
+  height: 310px;
 }
 
 .cardInner {
@@ -70,6 +70,7 @@
 .backPart {
   position: absolute;
   width: 100%;
+  text-align: justify;
   border-radius: 20px !important;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
@@ -92,6 +93,8 @@
   border-radius: 20px !important;
   background-color: azure;
   color: #728394;
+  overflow: auto;
+
   transform: rotateY(180deg);
 }
 

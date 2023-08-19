@@ -12,7 +12,7 @@ const About = () => {
       </div>
       <p>{personalInfo.aboutInto}</p>
       <div className={styles.personalInfo}>
-        <Image src={personalPhoto} alt="personal image" />
+        <Image src={personalPhoto} alt="personal image" style={{objectFit:"cover !important"}} />
         <div className={styles.bioData}>
           <h2>{personalInfo.profession}</h2>
           <p>{personalInfo.professionIntro}</p>

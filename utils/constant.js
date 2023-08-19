@@ -1,9 +1,12 @@
-import React from "../public/react.png";
-import HTMLCSS from "../public/htmlandcss.jpeg";
-import NodeJs from "../public/nodejs.png";
-import NextJs from "../public/nextjs.png";
-import NestJs from "../public/nestjs.jpeg";
-import Js from "../public/js.png";
+
+import Ikooru1 from "../public/project-images/ikooru-1.PNG";
+import Ikooru2 from "../public/project-images/ikooru-2.PNG";
+import Ikooru3 from "../public/project-images/ikooru-3.PNG";
+import Ikooru4 from "../public/project-images/ikooru-4.PNG";
+import Ikooru5 from "../public/project-images/ikooru-5.PNG";
+import GoMonday1 from "../public/project-images/gomonday-1.PNG";
+import GoMonday2 from "../public/project-images/gomonday-2.PNG";
+import GoMonday3 from "../public/project-images/gomonday-3.PNG";
 
 export const links = {
   github: "https://github.com/touseef-haider",
@@ -14,7 +17,7 @@ export const links = {
 
 export const floatingText = [
   "Software Engineer",
-  "Web Developer",
+  "Full Stack Engineer",
   "Freelancer",
   "Mixed Martial Artist",
 ];
@@ -22,13 +25,9 @@ export const floatingText = [
 export const personalInfo = {
   // About Page Data
   name: "Touseef Haider",
-  aboutInto: `Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-  aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-  quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-  sit in iste officiis commodi quidem hic quas.`,
+  aboutInto: `I am  an accomplished software engineer with 2.5 years of experience, specializing in full stack development. my expertise spans JavaScript, Golang, Python, React, Next.js, Node.js, and PostgreSQL. my proficiency extends to technologies like MongoDB, AWS, Docker, and NGINX, showcasing my adaptability. I graduated in 2022 with 3 CGPA, reflecting my commitment to growth. my proactive approach, collaborative nature, and continuous learning make me an asset in delivering high-quality software solutions.`,
   profession: "Software Engineer.",
-  professionIntro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-  eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+  professionIntro: `A software engineer with 2.5 years of experience in the dynamic domain of full stack development, my journey commenced in 2019. Immersed in various facets of software engineering,`,
   birthDay: "17 Jan,1998",
   majorDegree: "Bachelors in Computer Science",
   phone: "+92 331-2924590",
@@ -36,22 +35,25 @@ export const personalInfo = {
   city: "Karachi, Pakistan",
   isFreelanceAvailable: "Available",
   generalIntro:
-    "Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores",
-  address: "A108 Adam Street, New York, NY 535022",
+    "I have cultivated a strong foundation of expertise and a fervor for crafting efficient solutions. Graduating in 2022 marked a significant milestone, underlining a commitment to continuous growth and excellence. Characterized by a proactive mindset, adaptability, and a collaborative spirit, the focus remains on pushing the boundaries of innovation and creating impactful digital experiences.",
+  address: "R-118, Abdullah Shah Ghazi Villages, Scheme 33, Karachi, Sindh, Pakistan",
   footerIntro:
     "Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.",
 };
 
 export const facts = {
-  intro: ` Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-    aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-    quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-    sit in iste officiis commodi quidem hic quas.`,
   clients: 232,
   projectsCompleted: 521,
   supportHours: "24/7",
   awards: 25,
+  get intro() {
+    return `Numbers tell my story: ${this.clients} clients served, ${this.projectsCompleted} projects accomplished, ${this.supportHours} support hours given, and ${this.awards} awards earned – each digit a testament to my journey's dedication and impact.`;
+  },
 };
+
+export const portfolio = {
+  intro: `Discover the culmination of my software engineering journey through a curated selection of projects. Delve into the intricate fusion of frontend finesse and backend functionality, each exemplifying my dedication to crafting dynamic digital solutions. Explore the diverse challenges I've embraced and the innovative strategies I've employed to deliver tangible results.`
+}
 
 export const slider = [
   {
@@ -81,10 +83,7 @@ export const slider = [
 ];
 
 export const skills = {
-  intro: `Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-    aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-    quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-    sit in iste officiis commodi quidem hic quas.`,
+  intro: `My skillset forms the cornerstone of innovation in the software landscape. Proficient in a spectrum of technologies, I weave them harmoniously to craft seamless digital experiences. From empowering dynamic frontend interactions to architecting robust backend systems, my skills converge to drive impactful solutions that transcend conventional boundaries.`,
   majorSkills: [
     {
       skill: "HTML",
@@ -148,43 +147,102 @@ export const skills = {
 export const portfolioTabs = [
   {
     item: "ALL",
-    index: 0,
+    index: 1,
     cards: [
       {
-        image: "https://picsum.photos/500/500?random=3",
+        image: Ikooru1,
         title: "ALL",
+        name: "Ikooru"
       },
       {
-        image: "https://picsum.photos/500/500?random=4",
+        image: Ikooru2,
         title: "ALL",
+        name: "Ikooru"
+
       },
       {
-        image: "https://picsum.photos/500/500?random=5",
+        image: Ikooru3,
         title: "ALL",
+        name: "Ikooru"
+
+      },
+      {
+        image: Ikooru4,
+        title: "ALL",
+        name: "Ikooru"
+
+      },
+      {
+        image: Ikooru5,
+        title: "ALL",
+        name: "Ikooru"
+
+      },
+      {
+        image: GoMonday1,
+        title: "ALL",
+        name: "Go Monday"
+
+      },
+      {
+        image: GoMonday2,
+        title: "ALL",
+        name: "Go Monday"
+
+      },
+      {
+        image: GoMonday3,
+        title: "ALL",
+        name: "Go Monday"
+
       },
     ],
   },
   {
     item: "WEB",
-    index: 1,
+    index: 2,
     cards: [
       {
-        image: "https://picsum.photos/500/500?random=11",
+        image: Ikooru1,
         title: "WEB",
+        name: "Ikooru"
+
       },
       {
-        image: "https://picsum.photos/500/500?random=6",
+        image: Ikooru2,
         title: "WEB",
+        name: "Ikooru"
+
       },
       {
-        image: "https://picsum.photos/500/500?random=7",
+        image: Ikooru3,
         title: "WEB",
+        name: "Ikooru"
+
+      },
+      {
+        image: GoMonday1,
+        title: "ALL",
+        name: "Go Monday"
+
+      },
+      {
+        image: GoMonday2,
+        title: "ALL",
+        name: "Go Monday"
+
+      },
+      {
+        image: GoMonday3,
+        title: "ALL",
+        name: "Go Monday"
+
       },
     ],
   },
   {
     item: "APP",
-    index: 2,
+    index: 3,
     cards: [
       {
         image: "https://picsum.photos/500/500?random=8",
@@ -200,95 +258,52 @@ export const portfolioTabs = [
       },
     ],
   },
-  {
-    item: "SERVER",
-    index: 3,
-    cards: [
-      {
-        image: "https://picsum.photos/500/500?random=10",
-        title: "SERVER",
-      },
-    ],
-  },
 ];
 
 export const services = {
-  intro: `Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-    aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-    quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-    sit in iste officiis commodi quidem hic quas.`,
+  intro: `As a dedicated software engineer, I offer specialized services in both frontend and backend development. By combining a user-focused approach to frontend design with the technical intricacies of backend systems, I strive to create seamless and impactful digital experiences. With a commitment to continuous learning and a collaborative mindset, I bring a comprehensive perspective to every project, working to deliver effective solutions that resonate with users.`,
 
   servicesGiven: [
     {
       serviceName: "Frontend Development",
       details: [
-        {
-          icon: React,
-        },
-        {
-          icon: HTMLCSS,
-        },
-        {
-          icon: NextJs,
-        },
-        {
-          icon: Js,
-        },
+        `In the realm of frontend development, I specialize in creating captivating and intuitive user interfaces that leave a lasting impact. Leveraging my proficiency in HTML, CSS,Antd,Material UI, styled-components , and JavaScript,React, Nextjs, Gatsby, I meticulously design and implement responsive web applications that prioritize user experience. Through a deep understanding of user behavior and design principles, I ensure that each element, from layout to interaction, contributes to a seamless and enjoyable journey. With a keen eye for detail and a commitment to staying current with evolving design trends, I transform concepts into visually appealing, user-centric digital solutions.`
       ],
     },
     {
       serviceName: "Backend Development",
       details: [
-        {
-          icon: NodeJs,
-        },
-        {
-          icon: NestJs,
-        },
+        `On the backend front, I excel at constructing the robust foundations that power dynamic web applications. Using technologies like Node.js ,Golang and Python, I architect and develop efficient APIs and database structures that handle data processing, storage, and retrieval seamlessly. Security and scalability are at the forefront of my approach, ensuring that backend systems remain reliable, efficient, and adaptable to changing demands. By implementing best practices and staying up-to-date with backend technologies, I create the backbone that supports the seamless functionality of applications, while also integrating APIs and third-party services to enhance overall performance.`
       ],
     },
   ],
 };
 
 export const resume = {
-  intro: `Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-    aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-    quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-    sit in iste officiis commodi quidem hic quas.`,
+  intro: `My resumé reflects a journey of growth, experience, and accomplishments. With 2.5 years in software engineering, I've contributed to diverse projects and harnessed skills across the tech spectrum. From collaborating with clients to crafting efficient solutions, my resumé echoes dedication, versatility, and a track record of delivering high-quality results. Explore a snapshot of my professional evolution, underscoring my commitment to excellence and innovation`,
   summary: {
     title: "Summary",
     name: personalInfo.name,
-    basicIntro: `Innovative and deadline-driven Graphic Designer with 3+ years
-    of experience designing and developing user-centered
-    digital/print marketing material from initial concept to
-    final, polished deliverable.`,
+    basicIntro: `A versatile skillset spanning frontend, backend, and cloud technologies, and a commitment to innovation, I am poised to create impactful digital solutions that drive results and exceed expectation`,
   },
   education: [
     {
       course: personalInfo.majorDegree,
       duration: "2018 - 2022",
       institute: "University Of Karachi",
-      detail: `Qui deserunt veniam. Et sed aliquam labore tempore sed
-      quisquam iusto autem sit. Ea vero voluptatum qui ut
-      dignissimos deleniti nerada porti sand markend`,
+      detail: `My academic journey culminated in a 4 degree earned in 2022. This milestone not only represents my dedication to learning but also underscores my foundation in Computer Science. Equipped with theoretical insights and practical skills, this degree empowers me to approach software engineering with a holistic perspective, enhancing my ability to create effective, innovative solutions`,
     },
     {
       course: "Intermediate from Karachi Board",
       duration: "2016 - 2018",
       institute: "Govt. National College, Karachi, Sindh",
-      detail: `Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
-      reiciendis et quis Eius vel ratione eius unde vitae rerum
-      voluptates asperiores voluptatem Earum molestiae consequatur
-      neque etlon sader mart dila`,
+      detail: `My college education was a vital phase where I immersed myself in the world of pre-engineering. During this time, I honed my analytical thinking, problem-solving abilities, and foundational understanding of engineering principles. These years laid the groundwork for my future pursuits, sparking my enduring passion for crafting innovative solutions that bridge technology and creativity.`,
     },
     {
       course: "Matriculation from Karachi Board",
       duration: "2014 - 2016",
       institute: "NDDS. School Safoora, Karachi, Sindh",
-      detail: `Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
-      reiciendis et quis Eius vel ratione eius unde vitae rerum
-      voluptates asperiores voluptatem Earum molestiae consequatur
-      neque etlon sader mart dila`,
+      detail: `My school years were a time of discovery and wonder, where the seeds of curiosity and a love for learning were planted. It was during these formative years that I began cultivating the fundamentals of knowledge, communication, and teamwork. These early experiences ignited a lifelong journey of exploration, setting the stage for my ongoing pursuit of excellence in the field of software engineering."`,
     },
   ],
   experience: [
@@ -297,14 +312,10 @@ export const resume = {
       duration: "2021 - present",
       company: "Kodexo Labs,Nazimabad 4, Karachi, Sindh",
       responsibilities: [
-        `Lead in the design, development, and implementation of the
-        graphic, layout, and production communication materials`,
-        `Delegate tasks to the 7 members of the design team and
-        provide counsel on all aspects of the project.`,
-        `Supervise the assessment of all graphic materials in order
-        to ensure quality and accuracy of the design`,
-        `Oversee the efficient use of production project budgets
-        ranging from $2,000 - $25,000`,
+        `Within my role as an Engineer at Kodexo Labs, I navigate the frontier of innovation. My responsibilities encompass steering intricate projects, providing strategic vision, and nurturing a dynamic team. By fostering collaboration and leveraging technical expertise, I ensure the creation of exceptional solutions that consistently surpass client expectations. This leadership position not only sharpens my engineering skills but also underscores my unwavering commitment to driving technological excellence`,
+        `Spearheading innovation and project execution as an Engineer, providing strategic direction and mentorship to a dynamic team.`,
+        `Architecting and overseeing the development of cutting-edge software solutions, harnessing a diverse tech stack that includes JavaScript, Golang, Python, and more, to address complex client requirements.`,
+        `Streamlining processes through the implementation of advanced technologies like AWS, Google Cloud , Docker, NGINX, and cloud services, optimizing system performance and enhancing scalability across projects`
       ],
     },
     {
@@ -312,15 +323,20 @@ export const resume = {
       duration: "2020 - 2021",
       company: "Vamonos.pk (Remote), Karachi, Sindh",
       responsibilities: [
-        `Lead in the design, development, and implementation of the
-        graphic, layout, and production communication materials`,
-        `Delegate tasks to the 7 members of the design team and
-        provide counsel on all aspects of the project.`,
-        `Supervise the assessment of all graphic materials in order
-        to ensure quality and accuracy of the design`,
-        `Oversee the efficient use of production project budgets
-        ranging from $2,000 - $25,000`,
+        `Collaborated with cross-functional teams to develop and maintain responsive web applications using JavaScript, React, and Next.js, effectively enhancing user experience and engagement`,
+        `Gained hands-on experience in backend development with Node.js and Mongodb/Postgresql, contributing to the creation of robust APIs and efficient data management solutions.`,
+        `Played an integral role in the adoption of containerization using Docker, streamlining deployment processes and bolstering application scalability on AWS EBS`
       ],
     },
+    {
+      jobTitle: "Internee",
+      duration: "2020-2021",
+      company: "Truly Future Pvt ltd, Karachi, Sindh",
+      responsibilities: [
+        `Assisted in the development and testing of software applications, gaining practical exposure to languages such as JavaScript and Goland, while contributing to the optimization of codebase efficiency.`,
+        `Collaborated within a diverse team to troubleshoot issues and enhance the functionality of web applications, learning to navigate version control systems like Git for seamless code management.`,
+        `Participated in the deployment process of applications on cloud platforms, acquiring fundamental skills in utilizing cloud services and understanding the significance of scalability and reliability in modern software architecture.`
+      ]
+    }
   ],
 };
