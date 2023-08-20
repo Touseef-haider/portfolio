@@ -49,7 +49,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* width: 150px; */
 }
+
+.figures_subContainer{
+width: 180px;
+}
+
 .figures div p {
   margin-top: -10px;
   font-weight: lighter !important;
@@ -70,7 +76,9 @@
 /* Media Queries */
 @media (max-width: 786px) {
   .figures {
-    flex-direction: column !important;
+    flex-wrap: wrap;
+
+    /* flex-direction: column !important; */
   }
   .figures div p {
     margin-bottom: 70px;

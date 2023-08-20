@@ -9,6 +9,30 @@ import { Typewriter } from "react-simple-typewriter";
 import { links, floatingText, personalInfo } from "../../utils/constant";
 
 const Intro = () => {
+
+  const socialIcons = [
+    {
+      id: 1,
+      name: "facebookIcon",
+      icon: facebookIcon
+    },
+    {
+      id: 2,
+      name: "linkedInIcon",
+      icon: linkedInIcon
+    },
+    {
+      id: 1,
+      name: "githubIcon",
+      icon: githubIcon
+    },
+    {
+      id: 1,
+      name: "twitterIcon",
+      icon: twitterIcon
+    },
+  ]
+
   return (
     <div className={styles.container}>
       <div className={styles.intro}>
@@ -31,18 +55,15 @@ const Intro = () => {
           </span>
         </p>
         <div className={styles.links}>
-          <a href={links.facebook} target="_blank" rel="noreferrer">
-            <Image src={facebookIcon} width={20} height={20} />
+          {
+            socialIcons.map(({id, name, icon})=>(
+          <a href={links.facebook} target="_blank" rel="noreferrer" key={id}>
+            <Image src={icon} width={30} height={30} alt={name} />
           </a>
-          <a href={links.linkedIn} target="_blank" rel="noreferrer">
-            <Image src={linkedInIcon} width={20} height={20} />
-          </a>
-          <a href={links.github} target="_blank" rel="noreferrer">
-            <Image src={githubIcon} width={20} height={20} />
-          </a>
-          <a href={links.twitter} target="_blank" rel="noreferrer">
-            <Image src={twitterIcon} width={20} height={20} />
-          </a>
+
+            ))
+          }
+          
         </div>
       </div>
     </div>

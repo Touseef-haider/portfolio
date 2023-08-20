@@ -32,7 +32,7 @@ const SideMenu = () => {
         <Image src={Toggler} alt="toggle" />
       </div>
       <MobileSideMenu addClass={addClass} setAddClass={setAddClass} />
-      <ul className={styles.sideMenu}>
+      <ul className={styles.sideMenu} >
         <a href="#home">
           <li
             onClick={() => handleActive(1)}
