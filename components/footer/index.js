@@ -15,7 +15,7 @@ const Footer = () => {
       <div className={styles.socialLinks}>
         <a href={links.facebook} target="_blank" rel="noreferrer">
           <div className={styles.link}>
-            <Image src={facebookIcon} height={15} width={15} />
+            <Image  src={facebookIcon} height={15} width={15} />
           </div>
         </a>
         <a href={links.linkedIn} target="_blank" rel="noreferrer">

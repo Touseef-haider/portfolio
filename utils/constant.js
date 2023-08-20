@@ -7,6 +7,10 @@ import Ikooru5 from "../public/project-images/ikooru-5.PNG";
 import GoMonday1 from "../public/project-images/gomonday-1.PNG";
 import GoMonday2 from "../public/project-images/gomonday-2.PNG";
 import GoMonday3 from "../public/project-images/gomonday-3.PNG";
+import Curacut1 from "../public/project-images/curacut-1.PNG";
+import Curacut2 from "../public/project-images/curacut-2.PNG";
+import Curacut3 from "../public/project-images/curacut-3.PNG";
+import Curacut4 from "../public/project-images/curacut-3.PNG";
 
 export const links = {
   github: "https://github.com/touseef-haider",
@@ -38,14 +42,14 @@ export const personalInfo = {
     "I have cultivated a strong foundation of expertise and a fervor for crafting efficient solutions. Graduating in 2022 marked a significant milestone, underlining a commitment to continuous growth and excellence. Characterized by a proactive mindset, adaptability, and a collaborative spirit, the focus remains on pushing the boundaries of innovation and creating impactful digital experiences.",
   address: "R-118, Abdullah Shah Ghazi Villages, Scheme 33, Karachi, Sindh, Pakistan",
   footerIntro:
-    "Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.",
+    "Committed to code",
 };
 
 export const facts = {
-  clients: 232,
-  projectsCompleted: 521,
+  clients: 11,
+  projectsCompleted: 23,
   supportHours: "24/7",
-  awards: 25,
+  awards: 4,
   get intro() {
     return `Numbers tell my story: ${this.clients} clients served, ${this.projectsCompleted} projects accomplished, ${this.supportHours} support hours given, and ${this.awards} awards earned – each digit a testament to my journey's dedication and impact.`;
   },
@@ -60,25 +64,19 @@ export const slider = [
     image: "https://picsum.photos/600/300?random=1",
     clientName: "Tanveer Haider",
     role: "Ceo Co-founder (GYM Karo)",
-    review: `Export tempor illum tamen malis malis eram quae irure esse labore quem
-    cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
-    noster fugiat irure amet legam anim culpa.`,
+    review: `Touseef's frontend expertise brought our project to life. His designs captured the essence of our brand, and his attention to detail ensured a flawless user experience. His ability to adapt to our evolving requirements made collaboration a breeze.`,
   },
   {
-    image: "https://picsum.photos/600/300?random=1",
+    image: "https://picsum.photos/600/300?random=2",
     clientName: "Ateeq Haider",
     role: "Artist & Designer",
-    review: `Export tempor illum tamen malis malis eram quae irure esse labore quem
-    cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
-    noster fugiat irure amet legam anim culpa.`,
+    review: `Impressed by Touseef's backend proficiency! His architecture laid the groundwork for our application's success. The robust APIs and databases he crafted seamlessly handle our data needs. His dedication to security and staying current with trends made him an invaluable asset.`,
   },
   {
-    image: "https://picsum.photos/600/300?random=1",
+    image: "https://picsum.photos/600/300?random=3",
     clientName: "Ateeq Haider",
     role: "Artist & Designer",
-    review: `Export tempor illum tamen malis malis eram quae irure esse labore quem
-    cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
-    noster fugiat irure amet legam anim culpa.`,
+    review: `Working with Touseef was a pleasure. His frontend skills turned our vision into reality. The user interfaces he designed were not only visually appealing but also highly functional. His commitment to deadlines and clear communication made the entire process smooth.`,
   },
 ];
 
@@ -179,6 +177,30 @@ export const portfolioTabs = [
 
       },
       {
+        image: Curacut1,
+        title: "ALL",
+        name: "Curacut"
+
+      },
+      {
+        image: Curacut2,
+        title: "ALL",
+        name: "Curacut"
+
+      },
+      {
+        image: Curacut3,
+        title: "ALL",
+        name: "Curacut"
+
+      },
+      {
+        image: Curacut4,
+        title: "ALL",
+        name: "Curacut"
+
+      },
+      {
         image: GoMonday1,
         title: "ALL",
         name: "Go Monday"
@@ -198,66 +220,66 @@ export const portfolioTabs = [
       },
     ],
   },
-  {
-    item: "WEB",
-    index: 2,
-    cards: [
-      {
-        image: Ikooru1,
-        title: "WEB",
-        name: "Ikooru"
+  // {
+  //   item: "WEB",
+  //   index: 2,
+  //   cards: [
+  //     {
+  //       image: Ikooru1,
+  //       title: "WEB",
+  //       name: "Ikooru"
 
-      },
-      {
-        image: Ikooru2,
-        title: "WEB",
-        name: "Ikooru"
+  //     },
+  //     {
+  //       image: Ikooru2,
+  //       title: "WEB",
+  //       name: "Ikooru"
 
-      },
-      {
-        image: Ikooru3,
-        title: "WEB",
-        name: "Ikooru"
+  //     },
+  //     {
+  //       image: Ikooru3,
+  //       title: "WEB",
+  //       name: "Ikooru"
 
-      },
-      {
-        image: GoMonday1,
-        title: "ALL",
-        name: "Go Monday"
+  //     },
+  //     {
+  //       image: GoMonday1,
+  //       title: "ALL",
+  //       name: "Go Monday"
 
-      },
-      {
-        image: GoMonday2,
-        title: "ALL",
-        name: "Go Monday"
+  //     },
+  //     {
+  //       image: GoMonday2,
+  //       title: "ALL",
+  //       name: "Go Monday"
 
-      },
-      {
-        image: GoMonday3,
-        title: "ALL",
-        name: "Go Monday"
+  //     },
+  //     {
+  //       image: GoMonday3,
+  //       title: "ALL",
+  //       name: "Go Monday"
 
-      },
-    ],
-  },
-  {
-    item: "APP",
-    index: 3,
-    cards: [
-      {
-        image: "https://picsum.photos/500/500?random=8",
-        title: "APP",
-      },
-      {
-        image: "https://picsum.photos/500/500?random=9",
-        title: "APP",
-      },
-      {
-        image: "https://picsum.photos/500/500?random=10",
-        title: "APP",
-      },
-    ],
-  },
+  //     },
+  //   ],
+  // },
+  // {
+  //   item: "APP",
+  //   index: 3,
+  //   cards: [
+  //     {
+  //       image: "https://picsum.photos/500/500?random=8",
+  //       title: "APP",
+  //     },
+  //     {
+  //       image: "https://picsum.photos/500/500?random=9",
+  //       title: "APP",
+  //     },
+  //     {
+  //       image: "https://picsum.photos/500/500?random=10",
+  //       title: "APP",
+  //     },
+  //   ],
+  // },
 ];
 
 export const services = {
@@ -267,13 +289,13 @@ export const services = {
     {
       serviceName: "Frontend Development",
       details: [
-        `In the realm of frontend development, I specialize in creating captivating and intuitive user interfaces that leave a lasting impact. Leveraging my proficiency in HTML, CSS,Antd,Material UI, styled-components , and JavaScript,React, Nextjs, Gatsby, I meticulously design and implement responsive web applications that prioritize user experience. Through a deep understanding of user behavior and design principles, I ensure that each element, from layout to interaction, contributes to a seamless and enjoyable journey. With a keen eye for detail and a commitment to staying current with evolving design trends, I transform concepts into visually appealing, user-centric digital solutions.`
+        `In frontend development, I specialize in crafting captivating user interfaces with expertise in HTML, CSS, Antd, Material UI, styled-components, JavaScript, React, Nextjs, and Gatsby. I design responsive web applications that prioritize user experience, harmonizing layout and interaction for seamless journeys. With attention to detail and a pulse on design trends, I transform concepts into visually appealing, user-centric solutions.`
       ],
     },
     {
       serviceName: "Backend Development",
       details: [
-        `On the backend front, I excel at constructing the robust foundations that power dynamic web applications. Using technologies like Node.js ,Golang and Python, I architect and develop efficient APIs and database structures that handle data processing, storage, and retrieval seamlessly. Security and scalability are at the forefront of my approach, ensuring that backend systems remain reliable, efficient, and adaptable to changing demands. By implementing best practices and staying up-to-date with backend technologies, I create the backbone that supports the seamless functionality of applications, while also integrating APIs and third-party services to enhance overall performance.`
+        `In backend development, I excel in crafting robust foundations for dynamic web apps using Node.js, Golang, and Python. I design efficient APIs and databases for seamless data processing and prioritize security and scalability. Adhering to best practices and staying current with tech, I build reliable, adaptable backend systems that seamlessly integrate APIs and third-party services for peak performance`
       ],
     },
   ],

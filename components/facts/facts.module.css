@@ -40,9 +40,9 @@
 
 .figures {
   width: 100%;
-  display: flex;
+  display: grid;
   margin-top: 20px;
-  justify-content: space-around;
+  grid-template-columns: repeat(4,1fr);
 }
 .figures div {
   display: flex;
@@ -70,7 +70,7 @@
 /* Media Queries */
 @media (max-width: 786px) {
   .figures {
-    flex-direction: column !important;
+    grid-template-columns: repeat(2,1fr) !important;
   }
   .figures div p {
     margin-bottom: 70px;

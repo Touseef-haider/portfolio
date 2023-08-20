@@ -1,6 +1,6 @@
 .footer {
   margin-top: 60px;
-  height: 40vh;
+  height: 30vh;
   position: relative;
   width: 100%;
   text-align: center;
@@ -19,6 +19,7 @@
   display: flex;
   gap: 8px;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .link {
   width: 40px;
@@ -39,8 +40,5 @@
 }
 
 .copyRight {
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
+  text-align: center;
 }

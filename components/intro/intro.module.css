@@ -46,7 +46,7 @@
 @media (max-width: 786px) {
   .container {
     background-size: cover;
-    background-image: url("../../public/touseef2.jpg");
+    background-image: url("../../public/hero-bg.jpeg");
     background-repeat: no-repeat;
     height: 100vh;
   }

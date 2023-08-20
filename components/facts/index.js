@@ -10,7 +10,7 @@ const Facts = () => {
   return (
     <div className={styles.container} id="facts">
       <div className={styles.facts}>
-        <h1>Facts</h1>
+        <h1>FACTS</h1>
       </div>
       <p>{facts.intro}</p>
       <div className={styles.figures}>

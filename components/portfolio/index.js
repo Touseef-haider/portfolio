@@ -33,8 +33,6 @@ const Portfolio = () => {
     }
   });
 
-  console.log(filteredData)
-
 
 
   return (
@@ -43,7 +41,7 @@ const Portfolio = () => {
         <h1>PORTFOLIO</h1>
       </div>
       <p>
-       {portfolio.intro}
+        {portfolio.intro}
       </p>
       <div className={styles.tabs}>
         {tabs.map((item) => (
@@ -60,17 +58,19 @@ const Portfolio = () => {
       <div className={styles.tabsElement}>
         {Array.isArray(filteredData) && filteredData.length > 0 &&
           filteredData.map((item) => (
-            <div key={item.index} className={styles.element}>
+            <div style={{ width: "100%" }} key={item.index} className={styles.element}>
               {item?.cards?.map((card, index) => (
-                <div>
+                <div style={{ width: "100%" }} onMouseDown={() => setSelectedCardIndex(index)} onMouseOver={() => setSelectedCardIndex(index)}>
                   <Image
+                    style={{ width: "100%" }}
+                    // layout="fill"
                     width={460}
                     height={270}
                     src={card.image}
                     onClick={() => handleCardClick(index)}
                     alt="image"
                   />
-                  <div className={styles.wrapper}>
+                  <div  className={styles.wrapper}>
                     <h4>{card.title}</h4>
                     <small>{card.name}</small>
                     {selectedCardIndex === index && (

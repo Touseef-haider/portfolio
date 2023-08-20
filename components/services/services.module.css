@@ -73,6 +73,7 @@
   text-align: justify;
   border-radius: 20px !important;
   height: 100%;
+  overflow: auto;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -93,8 +94,6 @@
   border-radius: 20px !important;
   background-color: azure;
   color: #728394;
-  overflow: auto;
-
   transform: rotateY(180deg);
 }
 
@@ -107,5 +106,13 @@
   .development {
     width: 100% !important;
     grid-template-columns: 1fr !important;
+  }
+}
+
+
+@media (max-width:1180px) {
+  .development{
+    width: 100%;
+    grid-template-columns: 1fr  !important;
   }
 }

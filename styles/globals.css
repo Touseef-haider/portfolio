@@ -35,9 +35,10 @@ a {
 }
 
 /* Media Queries */
+
 @media (max-width: 786px) {
   .layout {
-    width: 100%;
-    padding: 0px 60px;
+    padding: 0px 20px;
   }
+  
 }
