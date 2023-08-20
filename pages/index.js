@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
         <title>Portfolio, Touseef Haider</title>
         <meta name="description" content="Software engineer" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/personal.jpeg" />
       </Head>
       <SideMenu />
       <Intro />
