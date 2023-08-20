@@ -44,11 +44,14 @@
   font-weight: 600;
   /* transition: all ease-in-out 1s; */
   gap: 15px;
+
 }
 
 .tabs div {
   width: 100px;
   text-align: center;
+  margin-top: 8px;
+
 }
 
 
@@ -57,7 +60,6 @@
   border-bottom-width: 2px;
   border-bottom-color: #0563bb;
   border-bottom-style: solid;
-
 }
 
 .tabs div {
@@ -67,6 +69,8 @@
 .tabsElement {
   width: 100%;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .element {
@@ -83,10 +87,12 @@
   height: 100%;
   position: relative;
   animation: show-up ease-in-out 0.3s;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper {
-  width: 100%;
+  width: 460px;
   background:rgba(255, 255, 255, 0.7);
   height: 100%;
   position: absolute;
@@ -163,5 +169,6 @@
 @media (max-width: 786px) {
   .element {
     grid-template-columns: 1fr !important;
+    align-self: center;
   }
 }

@@ -17,8 +17,14 @@ body {
 
 .layout {
   width: 100%;
-  padding-left: 150px;
-  padding-right: 30px;
+  /* padding-left: 150px;
+  padding-right: 30px; */
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+ 
+
 }
 
 a {
@@ -35,9 +41,18 @@ a {
 }
 
 /* Media Queries */
-@media (max-width: 786px) {
+@media (max-width: 1208px) {
   .layout {
-    width: 100%;
-    padding: 0px 60px;
+   max-width: 824px;
   }
+}
+@media (max-width: 960px) {
+  .layout {
+    max-width: 640px;
+   }
+}
+@media (max-width: 768px) {
+  .layout {
+    max-width: 100%;
+   }
 }

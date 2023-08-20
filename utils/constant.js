@@ -42,10 +42,6 @@ export const personalInfo = {
 };
 
 export const facts = {
-  clients: 232,
-  projectsCompleted: 521,
-  supportHours: "24/7",
-  awards: 25,
   get intro() {
     return `Numbers tell my story: ${this.clients} clients served, ${this.projectsCompleted} projects accomplished, ${this.supportHours} support hours given, and ${this.awards} awards earned – each digit a testament to my journey's dedication and impact.`;
   },

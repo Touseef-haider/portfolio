@@ -7,41 +7,51 @@ import AwardIcon from "../../public/trophy.png";
 import { facts } from "../../utils/constant";
 
 const Facts = () => {
+  const factsData = [
+    {
+      id: 1,
+      name: "Happy Clients",
+      icon: SmileyIcon,
+      facts: 232,
+    },
+    {
+      id: 2,
+      name: "Projects",
+      icon: ServicesIcon,
+      facts: 521,
+
+    },
+    {
+      id: 3,
+      name: "Hours Of Support",
+      icon: HeadphoneIcon,
+      facts: "24/7",
+
+    },
+    {
+      id: 4,
+      name: "Awards",
+      icon: AwardIcon,
+      facts: 25,
+
+    },
+  ];
   return (
     <div className={styles.container} id="facts">
       <div className={styles.facts}>
-        <h1>Facts</h1>
+        <h1>FACTS</h1>
       </div>
       <p>{facts.intro}</p>
       <div className={styles.figures}>
-        <div>
-          <div className={styles.circle}>
-            <Image src={SmileyIcon} width={20} height={20} alt="smile" />
+        {factsData.map(({ id, icon, name, facts }) => (
+          <div key={id} className={styles.figures_subContainer}>
+            <div className={styles.circle}>
+              <Image src={icon} width={20} height={20} alt={name} />
+            </div>
+            <h2>{facts}</h2>
+            <p>{name}</p>
           </div>
-          <h1>{facts.clients}</h1>
-          <p>Happy Clients</p>
-        </div>
-        <div>
-          <div className={styles.circle}>
-            <Image src={ServicesIcon} width={20} height={20} alt="smile" />
-          </div>
-          <h1>{facts.projectsCompleted}</h1>
-          <p>Projects</p>
-        </div>
-        <div>
-          <div className={styles.circle}>
-            <Image src={HeadphoneIcon} width={20} height={20} alt="smile" />
-          </div>
-          <h1>{facts.supportHours}</h1>
-          <p>Hours Of Support</p>
-        </div>
-        <div>
-          <div className={styles.circle}>
-            <Image src={AwardIcon} width={20} height={20} alt="smile" />
-          </div>
-          <h1>{facts.awards}</h1>
-          <p>Awards</p>
-        </div>
+        ))}
       </div>
     </div>
   );

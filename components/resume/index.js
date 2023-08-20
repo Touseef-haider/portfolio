@@ -29,7 +29,7 @@ const Resume = () => {
             </div>
           </div>
           <div className={styles.summary}>
-            <h1>Education</h1>
+            <h1 style={{marginTop: 36}}>Education</h1>
             <div className={styles.education}>
               {resume.education.map((education) => (
                 <div className={styles.spots} key={education.course}>

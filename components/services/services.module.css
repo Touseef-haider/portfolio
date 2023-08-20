@@ -94,6 +94,7 @@
   background-color: azure;
   color: #728394;
   overflow: auto;
+  padding: 80px 15px 0px 15px;
 
   transform: rotateY(180deg);
 }
